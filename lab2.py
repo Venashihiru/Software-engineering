@@ -105,9 +105,24 @@ switch = "switch"
 case = "case"
 swit=[]
 switch_case_num = 0
+case1_num = []
+c_num=0
 for i in range(length):
     if file1[i].find(switch) >= 0:
         switch_case_num += 1
         swit.append(i)
     i+=1
 print("The number of 'switch-case' struture is ", switch_case_num)
+i=0
+while i<23:
+    if file1[i].find(case) >= 0:
+        c_num+=1
+    i+=1
+case1_num.append(c_num)
+c_num=0
+while i>=23 and i<length:
+    if file1[i].find(case) >= 0:
+        c_num+=1
+    i+=1
+case1_num.append(c_num)
+print("case num", case1_num[0],case1_num[1])
