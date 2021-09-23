@@ -146,17 +146,20 @@ if1="if"
 else1="else"
 elseif="else if"
 if_elseif_else_num=0
+file2=file.readlines()
+length1=len(file2)
+print(file2)
 if_else_num=0
 for i in range(length1):
-    if file1[i].find(if1)>=0 and file1[i+1].find(else1)>=0 and file1[i+1].find(if1)<0:
+    if file2[i].find(if1)>=0 and file2[i+1].find(else1)>=0 and file2[i+1].find(if1)<0:
         if_else_num+=1
-        file1[i]=file1[i].replace("if","aaa")
-        file1[i+1]=file1[i+1].replace("else","aaa")
+        file2[i]=file2[i].replace("if","aaa")
+        file2[i+1]=file2[i+1].replace("else","aaa")
         i+=1
 i=0
-for i in range(length1-4):
-    for a in range(4):
-        if file1[i].find(if1)>=0 and file1[i+a].find(elseif)>=0 and file1[i].find(else1)<0:
+for i in range(length1-5):
+    for a in range(5):
+        if file2[i].find(if1)>=0 and file2[i+a].find(elseif)>=0 and file2[i].find(else1)<0:
             if_elseif_else_num+=1
             a+=1
             i+=1
