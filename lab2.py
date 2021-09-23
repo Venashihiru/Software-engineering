@@ -99,3 +99,15 @@ for i in range(length):
 print(return_num)
 total_num=switch_num+int_num+double_num+long_num+case_num+default_num+break_num+if_num+else_num+return_num
 print("total num", total_num)
+#2 find switch-case structure output the number of structure and "case" corresponding to each group
+i = 0
+switch = "switch"
+case = "case"
+swit=[]
+switch_case_num = 0
+for i in range(length):
+    if file1[i].find(switch) >= 0:
+        switch_case_num += 1
+        swit.append(i)
+    i+=1
+print("The number of 'switch-case' struture is ", switch_case_num)
