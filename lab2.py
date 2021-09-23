@@ -126,3 +126,13 @@ while i>=swit[-1] and i<length:
     i+=1
 case1_num.append(c_num)
 print("case num", case1_num[0],case1_num[1])
+#3 ifelse struture
+i=0
+if1="if"
+else1="else"
+if_else_num=0
+for i in range(length):
+    if file1[i].find(if1)>=0 and file1[i+1].find(else1)>=0 and file1[i+1].find(if1)<0:
+        if_else_num+=1
+        i+=1
+print("if-else num", if_else_num)
