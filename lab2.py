@@ -134,5 +134,7 @@ if_else_num=0
 for i in range(length):
     if file1[i].find(if1)>=0 and file1[i+1].find(else1)>=0 and file1[i+1].find(if1)<0:
         if_else_num+=1
+        file1[i] = file1[i].replace("if", "aaa")
+        file1[i + 1] = file1[i + 1].replace("else", "aaa")
         i+=1
 print("if-else num", if_else_num)
