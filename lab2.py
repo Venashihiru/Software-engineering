@@ -114,13 +114,13 @@ for i in range(length):
     i+=1
 print("The number of 'switch-case' struture is ", switch_case_num)
 i=0
-while i<23:
+while i<swit[-1]:
     if file1[i].find(case) >= 0:
         c_num+=1
     i+=1
 case1_num.append(c_num)
 c_num=0
-while i>=23 and i<length:
+while i>=swit[-1] and i<length:
     if file1[i].find(case) >= 0:
         c_num+=1
     i+=1
